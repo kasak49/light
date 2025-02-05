@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light, My virtual assistant</title>
+    <link rel="shortcut icon" href="true.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+ <body>
+
+
+    <img src="panda.png" alt="logo" id="logo">
+    <h1>I'm <span id="name">light</span>,your<span id="va">Virtual assistant </span></h1>
+    <img src="my.gif" alt="voice" id="voice">
+     <button id="btn"><img src="mic.svg" alt="mic"><span id="content">Click here for talk to me</span></button>
+    <script src="script.js"></script>
+
+   
+
+        <script async src="https://cse.google.com/cse.js?cx=b54f4d43e54dc4593">
+        </script>
+        <div class="gcse-search" id="tuta"></div>
+       
+
+        <div id="offlineMessage">
+            <img id="offlineImage" src="Loding.gif" alt="No Internet Connection">
+        </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #search-results {
+            margin: 20px auto;
+            width: 80%;
+        }
+        .result {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .result a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #1a0dab;
+        }
+        .result a:hover {
+            text-decoration: underline;
+        }
+        .url {
+            color: green;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .description {
+            font-size: 16px;
+            color: #4d5156;
+        }
+    </style>
+</head>
+<body>
+
+<div id="search-results">
+    <!-- The search results will be dynamically inserted here -->
+</div>
+
+<script>
+    // Sample search result data (you can replace this with real search results)
+    const results = [
+       
+    {
+            title: "krishna image",
+            url: "https://pixabay.com/images/search/krishna/",
+            description: ""
+        },
+        {
+        title: "open chat gpt",
+            url: " https://chatgpt.com/",
+            description: ""
+        },
+        {
+        title: "instagram",
+            url: "https://www.instagram.com/",
+            description: ""
+        },
+        {
+        title: "youtube",
+            url: "https://www.youtube.com//",
+            description: ""
+        },
+        {
+        title: "printerest",
+            url: "https://in.pinterest.com/",
+            description: ""
+        },
+
+
+
+    ];
+
+    function displaySearchResults() {
+        const resultsContainer = document.getElementById('search-results');
+
+        results.forEach(result => {
+            // Create a container for each result
+            const resultDiv = document.createElement('div');
+            resultDiv.classList.add('result');
+
+            // Create the clickable title (link)
+            const title = document.createElement('a');
+            title.href = result.url;
+            title.target = "_blank"; // Opens in a new tab
+            title.innerText = result.title;
+            
+            // Create the URL display
+            const url = document.createElement('div');
+            url.classList.add('url');
+            url.innerText = result.url;
+
+            // Create the description text
+            const description = document.createElement('div');
+            description.classList.add('description');
+            description.innerText = result.description;
+
+            // Append elements to the result div
+            resultDiv.appendChild(title);
+            resultDiv.appendChild(url);
+            resultDiv.appendChild(description);
+
+            // Append result to the results container
+            resultsContainer.appendChild(resultDiv);
+        });
+    }
+
+    // Call the function to display the search results
+    displaySearchResults();
+</script>
+</body>
+</html>
+
+
+
+
+
